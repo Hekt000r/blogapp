@@ -5,30 +5,27 @@ import "../App.css";
 import { addDoc, collection } from "firebase/firestore";
 import { auth, db } from "../firebase-config";
 import { useNavigate } from "react-router-dom";
-function CreatePost({IsAuth}) {
-  let navigate = useNavigate("")
-  
+function CreatePost({ IsAuth }) {
+  let navigate = useNavigate("");
+
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
-  const postCollectionsRef = collection(db, "posts")
+  const postCollectionsRef = collection(db, "posts");
 
   const createPost = async () => {
     await addDoc(postCollectionsRef, {
       title,
       content,
-      author : {name: auth.currentUser.displayName , id: auth.currentUser.uid,},
-    })
-    navigate("/")
-  }
+      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
+    });
+    navigate("/");
+  };
   useEffect(() => {
     if (!IsAuth) {
-      
-      navigate("/login")
+      navigate("/login");
     }
-  }, [])
- 
-  
+  }, []);
 
   return (
     <div className="CreatePostPage">
@@ -52,7 +49,9 @@ function CreatePost({IsAuth}) {
           onChange={(e) => setContent(e.target.value)}
           placeholder="Post content"
         />
-        <Button onClick={createPost} variant="success">Create Post</Button>
+        <Button onClick={createPost} variant="success">
+          Create Post
+        </Button>
       </Form>
     </div>
   );
