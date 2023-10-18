@@ -1,3 +1,10 @@
+# Basic blog app
+This is a project created with React, React-router, React-Bootstrap, and Firebase.
+
+This was a project to test displaying of posts, as in the future i plan to build a social Media app which
+will probably include this app.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
