@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+.link{
+    text-decoration: none;
+    color: black;
+    margin-top: 3px;
+    margin-right: 12px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.google-icon{
+    margin-right: 8px;
+    margin-bottom: 4px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-center{
+    text-align: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.div-center{
+    margin: auto;
+    width: 50%;
+    
+    padding: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.sign-in-btn{
+    margin-left: 30%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blog-grid {
+    position: relative;
+    box-shadow: 0 1rem 1.75rem 0 rgba(45, 55, 75, 0.1);
+    
+    border: 0.0625rem solid rgba(220, 224, 229, 0.6);
+    border-radius: 0.25rem;
+    transition: all .2s ease-in-out;
+    
+    margin: 2em;
+    width: 50%;
+    margin-left: 25%;
+    padding: 1em;
+    overflow-y: auto;
+    height: 1%;
+}
+.post-container{
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 250px;
+    word-wrap: break-word;
 }
